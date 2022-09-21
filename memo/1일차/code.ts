@@ -14,10 +14,13 @@ function day1() {
     const h: 5 = 5;
 
     // 일반 함수 타입
+    // 1. 함수에 타입 작성
     function add(x: number, y: number): number {
         return x + y;
     }
-    // 1. 함수 타입 빼주기
+    // 2. 함수 타입 빼주기
+    // - 이렇게 쓸 경우 구현체를 바로 아래에 작성을 해줘야 에러가 나지 않는다.
+    // - 에러가 나지 않기 위해선 declare 키워드를 선언해 줄 수 있다.(2일차 참고)
     function add3(x: number, y: number): number;
     function add3(x, y) {
         return x + y;
