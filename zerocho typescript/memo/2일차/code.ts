@@ -124,7 +124,11 @@ a2(() => {
 });
 
 // ## void 실전 예제
-declare function forEach(arr: number[], callback: (el: number) => void): void; // declare를 이용하면 구현체 없이 함수의 타입을 만들어서 사용이 가능하다. 주로 외부에서 선언된 함수나 변수에 대해 타입 선언을 할 때 declare를 자주 사용한다.
+declare function forEach(arr: number[], callback: (el: number) => void): void;
+// ※ declare
+//   - declare를 이용하면 구현체 없이 함수의 타입을 만들어서 사용이 가능하다.
+//   - 타입 정의만 하고 실제 구현체는 다른 곳에 있다고 ts를 속일 수 있는 것!
+//   - 주로 외부에서 선언된 함수나 변수에 대해 타입 선언을 할 때 declare를 자주 사용한다.
 
 let target: number[] = [];
 forEach([1, 2, 3], (el) => target.push(el)); // 지정한 타입: void, 실제 리턴 타입: number
